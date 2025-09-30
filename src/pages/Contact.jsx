@@ -6,6 +6,95 @@ import SectionHeading from '../components/SectionHeading';
 import Button from '../components/Button';
 import { contactData } from '../data/contactData';
 
+function QuickContact() {
+  // Handlers
+  const handlePhone = () => {
+    window.open(`tel:${contactData.phone}`);
+  };
+
+  const handleWhatsApp = () => {
+    const number = contactData.whatsapp.replace(/\D/g, ""); // remove spaces, +
+    window.open(`https://wa.me/${number}`, "_blank");
+  };
+
+  const handleEmail = () => {
+    window.open(`mailto:${contactData.email}`);
+  };
+
+  const handleLocation = () => {
+    window.open(
+      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        contactData.address
+      )}`,
+      "_blank"
+    );
+  };
+
+  return (
+    <div className="bg-white rounded-2xl shadow-lg p-8">
+      <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Contact</h2>
+      <div className="space-y-6">
+        
+        {/* Phone */}
+        <div
+          className="flex items-center space-x-4 cursor-pointer"
+          onClick={handlePhone}
+        >
+          <div className="bg-blue-100 p-3 rounded-lg">
+            <Phone className="h-6 w-6 text-blue-600" />
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900">Phone</p>
+            <p className="text-gray-600">{contactData.phone}</p>
+          </div>
+        </div>
+
+        {/* WhatsApp */}
+        <div
+          className="flex items-center space-x-4 cursor-pointer"
+          onClick={handleWhatsApp}
+        >
+          <div className="bg-green-100 p-3 rounded-lg">
+            <MessageCircle className="h-6 w-6 text-green-600" />
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900">WhatsApp</p>
+            <p className="text-green-600">{contactData.whatsapp}</p>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div
+          className="flex items-center space-x-4 cursor-pointer"
+          onClick={handleEmail}
+        >
+          <div className="bg-gray-100 p-3 rounded-lg">
+            <Mail className="h-6 w-6 text-gray-600" />
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900">Email</p>
+            <p className="text-gray-600">{contactData.email}</p>
+          </div>
+        </div>
+
+        {/* Address */}
+        <div
+          className="flex items-start space-x-4 cursor-pointer"
+          onClick={handleLocation}
+        >
+          <div className="bg-red-100 p-3 rounded-lg">
+            <MapPin className="h-6 w-6 text-red-600" />
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900">Address</p>
+            <p className="text-gray-600">{contactData.address}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -80,8 +169,8 @@ const Contact = () => {
                 />
                 
                 <form 
-                  onSubmit={handleSubmit}
-                  action="https://formspree.io/f/placeholder"
+                  // onSubmit={handleSubmit}
+                  action="https://formspree.io/f/meorawqv"
                   method="POST"
                   className="space-y-6"
                 >
@@ -167,7 +256,7 @@ const Contact = () => {
             >
               
               {/* Quick Contact */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
+              {/* <div className="bg-white rounded-2xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Contact</h2>
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
@@ -215,7 +304,9 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <QuickContact />
+   
 
               {/* Business Hours */}
               <div className="bg-white rounded-2xl shadow-lg p-8">

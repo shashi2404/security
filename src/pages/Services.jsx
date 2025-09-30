@@ -174,8 +174,8 @@ const Services = () => {
               <Button variant="secondary" size="lg" href="/contact">
                 Get Free Consultation
               </Button>
-              <Button variant="ghost" size="lg" href="tel:+1-555-123-4567" className="text-white border-white hover:bg-white hover:text-blue-600">
-                Call: (555) 123-4567
+              <Button variant="ghost" size="lg" href="tel:+919801704440" className="text-white border-white hover:bg-white hover:text-blue-600">
+                Call: 9801704440
               </Button>
             </div>
           </motion.div>

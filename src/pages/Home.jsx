@@ -22,6 +22,14 @@ const Home = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
+    const features = [
+    "Licensed and Insured Professionals",
+    "24/7 Emergency Response Available",
+    "Government Contracted Services",
+    "Highly Trained Security Personnel",
+    "State-of-the-Art Security Equipment",
+    "Customized Security Solutions"
+  ];
 
   return (
     <>
@@ -64,19 +72,30 @@ const Home = () => {
           >
             Professional Security Services You Can Trust
           </motion.p>
-          <motion.div
-            className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
-            <Button size="lg" href="/contact">
-              Get Free Quote
-            </Button>
-            <Button variant="secondary" size="lg" href="/services">
-              Our Services
-            </Button>
-          </motion.div>
+   <motion.div
+  className="flex flex-col md:flex-row items-center justify-center gap-4 w-full"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6, duration: 0.8 }}
+>
+    <Button
+    variant="secondary"
+    className="w-full md:w-56 h-16 md:h-20"
+    size="lg"
+    href="/services"
+  >
+    Our Services
+  </Button>
+  <Button
+    className="w-full md:w-56 h-16 md:h-20"
+    size="lg"
+    href="/contact"
+  >
+    Get Free Quote
+  </Button>
+
+</motion.div>
+
         </motion.div>
       </section>
 
@@ -125,72 +144,69 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <SectionHeading
-                subtitle="Why Choose D7S"
-                title="Your Security is Our Priority"
-                centered={false}
-                className="mb-8"
-              />
-              
-              <div className="space-y-6">
-                {[
-                  "Licensed and Insured Professionals",
-                  "24/7 Emergency Response Available",
-                  "Government Contracted Services",
-                  "Highly Trained Security Personnel",
-                  "State-of-the-Art Security Equipment",
-                  "Customized Security Solutions"
-                ].map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex items-center space-x-3"
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                  >
-                    <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700">{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
-              
-              <div className="mt-8">
-                <Button href="/about">Learn More About Us</Button>
-              </div>
-            </motion.div>
+ <section className="py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <SectionHeading
+              subtitle="Why Choose D7S"
+              title="Your Security is Our Priority"
+              centered={false}
+              className="mb-8"
+            />
+
+            <div className="space-y-4">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center space-x-3"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700 text-base md:text-lg">{feature}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-8">
+              <Button href="/about">Learn More About Us</Button>
+            </div>
+          </motion.div>
+
+          {/* Right Image */}
+          <motion.div
+            className="relative w-full"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="https://images.pexels.com/photos/7034347/pexels-photo-7034347.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Professional security team"
+              className="rounded-2xl shadow-2xl w-full h-auto object-cover"
+            />
             
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="https://images.pexels.com/photos/7034347/pexels-photo-7034347.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional security team"
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-xl shadow-lg">
-                <div className="text-center">
-                  <div className="text-3xl font-bold">24/7</div>
-                  <div className="text-sm">Security Coverage</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+            {/* Floating Badge */}
+            <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-3xl font-bold">24/7</div>
+              <div className="text-sm">Security Coverage</div>
+            </div>
+          </motion.div>
+          
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Testimonials */}
       <section className="py-20 bg-gray-50">
@@ -250,8 +266,8 @@ const Home = () => {
               <Button variant="secondary" size="lg" href="/contact">
                 Get Free Consultation
               </Button>
-              <Button variant="ghost" size="lg" href="tel:+1-555-123-4567" className="text-white border-white hover:bg-white hover:text-blue-600">
-                Call Now: (555) 123-4567
+              <Button variant="ghost" size="lg" href="tel:+919801704440" className="text-white border-white hover:bg-white hover:text-blue-600">
+                Call Now: 9801704440
               </Button>
             </div>
           </motion.div>

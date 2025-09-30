@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Shield, Phone, Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram, MessageCircle } from 'lucide-react';
 import { contactData } from '../data/contactData';
 
 const Footer = () => {
@@ -56,30 +56,70 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <Phone className="h-5 w-5 text-blue-400 mt-0.5" />
-                <div>
-                  <p className="text-gray-300 text-sm">{contactData.phone}</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Mail className="h-5 w-5 text-blue-400 mt-0.5" />
-                <div>
-                  <p className="text-gray-300 text-sm">{contactData.email}</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-blue-400 mt-0.5" />
-                <div>
-                  <p className="text-gray-300 text-sm">{contactData.address}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+     {/* Contact Info */}
+<div>
+  <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
+  <div className="space-y-3">
+    
+    {/* Phone */}
+    <div className="flex items-start space-x-3">
+      <Phone className="h-5 w-5 text-blue-400 mt-0.5" />
+      <div>
+        <a 
+          href="tel:+919801704440" 
+          className="text-gray-300 text-sm hover:text-white transition-colors"
+        >
+          9801704440
+        </a>
+      </div>
+    </div>
+
+    {/* WhatsApp */}
+    <div className="flex items-start space-x-3">
+      <MessageCircle className="h-5 w-5 text-green-400 mt-0.5" />
+      <div>
+        <a
+          href={`https://wa.me/919801704440?text=${encodeURIComponent("Hi! I want to contact you.")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 text-sm hover:text-white transition-colors"
+        >
+          WhatsApp: 9801704440
+        </a>
+      </div>
+    </div>
+
+    {/* Email */}
+    <div className="flex items-start space-x-3">
+      <Mail className="h-5 w-5 text-blue-400 mt-0.5" />
+      <div>
+        <a 
+          href="mailto:your-email@example.com" 
+          className="text-gray-300 text-sm hover:text-white transition-colors"
+        >
+          your-email@example.com
+        </a>
+      </div>
+    </div>
+
+    {/* Address */}
+    <div className="flex items-start space-x-3">
+      <MapPin className="h-5 w-5 text-blue-400 mt-0.5" />
+      <div>
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactData.address)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 text-sm hover:text-white transition-colors"
+        >
+          {contactData.address}
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
           {/* Business Hours */}
           <div>
