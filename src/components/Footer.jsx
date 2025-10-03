@@ -69,7 +69,7 @@ const Footer = () => {
           href="tel:+919801704440" 
           className="text-gray-300 text-sm hover:text-white transition-colors"
         >
-          9801704440
+          7743068246
         </a>
       </div>
     </div>
@@ -79,12 +79,12 @@ const Footer = () => {
       <MessageCircle className="h-5 w-5 text-green-400 mt-0.5" />
       <div>
         <a
-          href={`https://wa.me/919801704440?text=${encodeURIComponent("Hi! I want to contact you.")}`}
+          href={`https://wa.me/917743068246?text=${encodeURIComponent("Hi! I want to contact you.")}`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 text-sm hover:text-white transition-colors"
         >
-          WhatsApp: 9801704440
+          WhatsApp: 7743068246
         </a>
       </div>
     </div>
@@ -94,10 +94,10 @@ const Footer = () => {
       <Mail className="h-5 w-5 text-blue-400 mt-0.5" />
       <div>
         <a 
-          href="mailto:your-email@example.com" 
+          href="mailto:kumarupendra19393@gmail.com" 
           className="text-gray-300 text-sm hover:text-white transition-colors"
         >
-          your-email@example.com
+         kumarupendra19393@gmail.com
         </a>
       </div>
     </div>

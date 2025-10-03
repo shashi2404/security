@@ -7,7 +7,7 @@ export const galleryData = [
   },
   {
     id: 2,
-    url: "https://images.pexels.com/photos/7034347/pexels-photo-7034347.jpeg?auto=compress&cs=tinysrgb&w=800",
+    url: "https://img.freepik.com/premium-photo/professional-security-team-duty_653449-36351.jpg",
     alt: "Professional bodyguard service",
     category: "bodyguard"
   },

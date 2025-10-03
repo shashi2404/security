@@ -1,23 +1,23 @@
 export const testimonialsData = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "CEO, TechCorp Industries",
-    content: "D7S Security has been protecting our facilities for over 3 years. Their professionalism and reliability are unmatched.",
+    name: "Anuradha Sinha",
+    position: "CEO, BiharTech Solutions",
+    content: "D7S Security has been protecting our office premises in Patna for over 1 years. Their professionalism and reliability are truly unmatched.",
     rating: 5
   },
   {
     id: 2,
-    name: "Michael Chen",
-    position: "Event Manager",
-    content: "Outstanding event security services. They handled our 5,000+ person conference flawlessly with discrete yet effective security.",
+    name: "Rahul Prasad",
+    position: "Event Manager, Gaya Expo Events",
+    content: "Outstanding event security services. They managed our 1,00+ attendee trade fair in Gaya seamlessly with discreet and effective security.",
     rating: 5
   },
   {
     id: 3,
-    name: "Amanda Rodriguez",
-    position: "Property Manager",
-    content: "Their residential security services give our tenants peace of mind. Professional, punctual, and highly trained staff.",
+    name: "Neha Kumari",
+    position: "Property Manager, Patna Heights Residency",
+    content: "Their residential security services provide our residents in Patna with real peace of mind. The team is professional, punctual, and well-trained.",
     rating: 5
   }
 ];

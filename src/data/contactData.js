@@ -1,8 +1,8 @@
 export const contactData = {
-  phone: "+919801704440",
-  whatsapp: "+919801704440",
-  email: "yroushan2007@gmail.com",
-  address: "vishnu vihar  bhusunda gaya ",
+  phone: "+917366076553",
+  whatsapp: "+917366076553",
+  email: "kumarupendra19393@gmail.com",
+  address: "vishnu vihar Gali no-1 bhusunda gaya ",
   businessHours: {
     weekdays: "Monday - Friday: 8:00 AM - 6:00 PM",
     weekend: "Saturday - Sunday: 9:00 AM - 4:00 PM",

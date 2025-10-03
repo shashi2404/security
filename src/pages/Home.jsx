@@ -192,8 +192,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://images.pexels.com/photos/7034347/pexels-photo-7034347.jpeg?auto=compress&cs=tinysrgb&w=800"
-              alt="Professional security team"
+             
               className="rounded-2xl shadow-2xl w-full h-auto object-cover"
             />
             
@@ -266,8 +265,8 @@ const Home = () => {
               <Button variant="secondary" size="lg" href="/contact">
                 Get Free Consultation
               </Button>
-              <Button variant="ghost" size="lg" href="tel:+919801704440" className="text-white border-white hover:bg-white hover:text-blue-600">
-                Call Now: 9801704440
+              <Button variant="ghost" size="lg" href="tel:+917366076553" className="text-white border-white hover:bg-white hover:text-blue-600">
+                Call Now: 7366076553
               </Button>
             </div>
           </motion.div>
