@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-<<<<<<< HEAD
-Sitemap: https://security-nine-nu.vercel.app/sitemap.xml
-=======
-
 Sitemap: https://your-domain.web.app/sitemap.xml
->>>>>>> 72c9e03 (Update sitemap for d7ssecurity.com)
+
