@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://your-domain.web.app/sitemap.xml
 
+Sitemap: https://d7ssecurity.com/sitemap.xml
